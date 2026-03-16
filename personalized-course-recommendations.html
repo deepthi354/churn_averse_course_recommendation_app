@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Persona Selection</title>
+	<script src="https://cdn.plot.ly/plotly-2.24.1.min.js" charset="utf-8"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Shared Animations */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        
+        .fade-in { animation: fadeIn 0.6s ease-out forwards; }
+        .slide-in { animation: slideIn 0.3s ease-out; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: scale(1.05); }
+		
+		.minimized {
+			overflow: hidden;
+		}
+
+        /* Banner & Recommendation Card Hover Effects */
+        .interactive-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: default; }
+        .interactive-card:hover { transform: scale(1.02); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+		.interactive-card button,
+		.interactive-card .enroll-btn,
+		.interactive-card .btn-hover { cursor: pointer;	}
+        
+        /* Button Hover Effects */
+        .btn-hover { transition: all 0.3s ease; }
+        .btn-hover:hover { transform: scale(1.05); filter: brightness(1.1); }
+
+        /* Window Transitions */
+        #skillsModal, #recommendationsModal { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+
+        #radarChartContainer { position: relative; }
+		#radarChart { position: absolute; inset: 0; }
+
+		#skillsModalBody {
+			overflow-x: hidden !important;
+		}
+		
+        .custom-scroll::-webkit-scrollbar { width: 10px; }
+        .custom-scroll::-webkit-scrollbar-track { background: #B1C6DE; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #A6C0E3; border-radius: 10px; border: 3px solid #B1C6DE;}
+		.custom-scroll::-webkit-scrollbar-thumb:hover { background: #A7B3C4; }
+
+        .animate-reveal {
+            animation: fadeIn 0.5s ease-out forwards;
+            opacity: 0;
+        }
+		
+		/* Kill horizontal scroll */
+		#skillsModalBody {
+			overflow-x: hidden !important;
+		}
+
+		/* Shimmer Effect for Loading */
+		.shimmer-text {
+			display: inline-block;
+			height: 1em;
+			position: relative;
+			overflow: hidden;
+			background-color: #f3f4f6;
+			/* This creates the 'highlight' line */
+			background-image: linear-gradient(
+				90deg, 
+				rgba(255, 255, 255, 0) 0, 
+				rgba(255, 255, 255, 0.6) 50%, 
+				rgba(255, 255, 255, 0) 100%
+			);
+			background-size: 200% 100%;
+			animation: shimmer 1.5s infinite linear;
+			border-radius: 4px;
+		}
+
+		@keyframes shimmer {
+			0% { background-position: -200% 0; }
+			100% { background-position: 200% 0; }
+		}
+		
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-blue-100 p-8">
+    
+    <div class="max-w-6xl mx-auto mb-12 fade-in">
+        <h1 class="text-4xl font-bold text-purple-700 mb-3">Select User Persona</h1>
+        <p class="text-gray-600 text-lg">Choose a learner to view their personalized course recommendations - Prioritizes churn-aversion & growth oriented skill progression</p>
+    </div>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div onclick="handlePersonaClick(2129081, 10064)" class="bg-gradient-to-br from-indigo-400 to-violet-400 rounded-2xl p-1 cursor-pointer card-hover shadow-lg hover:shadow-2xl fade-in" style="animation-delay: 0.1s">
+            <div class="bg-white/90 backdrop-blur-sm rounded-xl p-6 h-full text-center">
+                <h2 class="text-xl font-bold text-purple-800 mb-2">Keerthana</h2>
+                <div class="text-sm text-gray-600 mb-4"><p>Enrolled : 52 courses</p><p>Completed : 51 courses - old only</p></div>
+                <div class="border-t border-gray-300 my-4"></div>
+                <p class="text-xs text-gray-600 mb-2">Just Completed Course:</p>
+                <p class="text-sm font-semibold text-gray-700 leading-tight">Fine-tuning & RL for LLMs: Intro to Post-training</p><br>
+                <p class="text-sm text-gray-600 ">Difficulty Level : Intermediate</p>
+            </div>
+        </div>
+
+        <div onclick="handlePersonaClick(18851, 1016)" class="bg-gradient-to-br from-purple-400 to-blue-400 rounded-2xl p-1 cursor-pointer card-hover shadow-lg hover:shadow-2xl fade-in" style="animation-delay: 0.2s">
+            <div class="bg-white/90 backdrop-blur-sm rounded-xl p-6 h-full text-center">
+                <h2 class="text-xl font-bold text-blue-800 mb-2">Heather</h2>
+                <div class="text-sm text-gray-600 mb-4"><p>Enrolled : 1 course</p><p>Completed : 0 courses</p></div>
+                <div class="border-t border-gray-300 my-4"></div>
+                <p class="text-xs text-gray-500 mb-2">Just Completed Course:</p>
+                <p class="text-sm font-semibold text-gray-700 leading-tight">Introducing Multimodal Llama 3.2</p><br>
+                <p class="text-sm text-gray-600">Difficulty Level : Beginner</p>
+            </div>
+        </div>
+
+        <div onclick="handlePersonaClick(4032, 10081)" class="bg-gradient-to-br from-indigo-400 to-violet-400 rounded-2xl p-1 cursor-pointer card-hover shadow-lg hover:shadow-2xl fade-in" style="animation-delay: 0.3s">
+            <div class="bg-white/90 backdrop-blur-sm rounded-xl p-6 h-full text-center">
+                <h2 class="text-xl font-bold text-purple-800 mb-2">Bhaskar</h2>
+                <div class="text-sm text-gray-600 mb-4"><p>Enrolled : 24 courses - Both old & new</p><p>Completed : 5 courses</p></div>
+                <div class="border-t border-gray-300 my-4"></div>
+                <p class="text-xs text-gray-500 mb-2">Just Completed Course:</p>
+                <p class="text-sm font-semibold text-gray-700 leading-tight">Pytorch: Fundamentals</p><br>
+                <p class="text-sm text-gray-600">Difficulty Level : Intermediate</p>
+            </div>
+        </div>
+
+        <div onclick="handlePersonaClick(789606, 10144)" class="bg-gradient-to-br from-purple-400 to-blue-400 rounded-2xl p-1 cursor-pointer card-hover shadow-lg hover:shadow-2xl fade-in" style="animation-delay: 0.4s">
+            <div class="bg-white/90 backdrop-blur-sm rounded-xl p-6 h-full text-center">
+                <h2 class="text-xl font-bold text-blue-800 mb-2">Cynthia</h2>
+                <div class="text-sm text-gray-600 mb-4"><p>Enrolled : 130 courses</p><p>Completed : 129 courses - full catalog except TF1 & MLEP</p></div>
+                <div class="border-t border-gray-300 my-4"></div>
+                <p class="text-xs text-gray-500 mb-2">Just Completed Course:</p>
+                <p class="text-sm font-semibold text-gray-700 leading-tight">Gemini CLI: Code & Create with an Open-Source Agent</p><br>
+                <p class="text-sm text-gray-600">Difficulty Level : Beginner</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-30 z-40" onclick="closeModal()"></div>
+
+    <div id="skillsModal" class="hidden fixed right-0 bottom-0 w-[65%] h-[95%] bg-white rounded-tl-3xl shadow-2xl z-50 slide-in flex flex-col overflow-hidden">
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-4 rounded-tl-3xl flex justify-between items-center shrink-0">
+            <div class="text-white flex items-center">
+                <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" /></svg>
+                <h2 id="mainHeading" class="text-xl font-bold">Congratulations on Completing Your Course!</h2>
+            </div>
+            <div class="flex space-x-1">
+                <button onclick="minimizeModal('skillsModal')" class="text-white hover:bg-white hover:bg-opacity-20 rounded-lg p-2 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M20 12H4" stroke-width="2"/></svg>
+                </button>
+                <button onclick="toggleMaximize('skillsModal')" class="text-white hover:bg-white hover:bg-opacity-20 rounded-lg p-2 transition-colors h-10 w-10 flex items-center justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4m12 0v4m0-4h-4M4 16v4m0 0h4m12 0v-4m0 4h-4" stroke-width="2"/></svg>
+                </button>
+                <button onclick="closeModal()" class="text-white hover:bg-white hover:bg-opacity-20 rounded-lg p-2 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-width="2"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="skillsModalBody" class="pt-2 p-6 overflow-y-auto flex-grow custom-scroll">
+            <h3 class="text-2xl font-bold text-gray-800 text-center mb-0">Your Skills Profile</h3>
+            <p class="text-gray-600 text-center text-sm mb-2">Click any skill category (dots) for top recommended courses to level up your expertise</p>
+            <div id="radarChartContainer" class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 mb-4 border border-blue-100 h-[60%]">
+				<!-- ✅ Plotly renders here -->
+                <div id="radarChart" class="w-full h-full"></div>
+            </div>
+            <div id="expertBanner" class="bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-blue-200 rounded-2xl p-2 flex items-center justify-between shadow-md animate-reveal interactive-card">
+                <div class="flex items-center space-x-6 flex-1">
+                    <div class="shrink-0">
+						<img src="https://data.dlai.link/human_chasing_star_status.png" alt="Path Towards Expertise" class="w-24 h-24 object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase shrink-0">TOP PICK FOR YOU</span>
+                            <span id="masteryText" class="text-sm text-gray-500"></span>
+                        </div>
+						<div id="PercentLeftToMastery" class="italic text-purple-600 text-base mb-1"></div>
+                        <h4 id="topRecommendationTitle" class="text-lg font-bold text-black mb-2"></h4>
+                        <div class="flex items-center space-x-4 mb-3 text-sm">
+                            <span id="courseLevel" class="px-2.5 py-1 rounded-full text-xs font-medium"></span>
+                            <span class="flex items-center text-gray-600">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <span id="courseDuration"></span>
+                            </span>
+                            <span class="flex items-center text-gray-600">
+                                <svg class="w-4 h-4 text-yellow-500 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                                <span id="courseRating"></span>
+                            </span>
+                        </div>
+                        <p id="courseDescription" class="text-gray-600 text-sm leading-relaxed max-w-3xl"></p>
+                    </div>
+                </div>
+                <button id="topRecommendationBtn" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold px-8 py-3 rounded-xl shadow-lg min-w-[160px] btn-hover">Enroll Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="recommendationsModal" class="hidden fixed right-0 bottom-0 w-[65%] h-[95%] bg-white rounded-tl-3xl shadow-2xl z-50 slide-in flex flex-col overflow-hidden">
+        <div class="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-4 rounded-tl-3xl flex justify-between items-center shrink-0">
+            <div class="text-white flex items-center"><h2 class="text-xl font-bold">Personalized Recommendations</h2></div>
+            <div class="flex space-x-1">
+                <button onclick="minimizeModal('recommendationsModal')" class="text-white hover:bg-white hover:bg-opacity-20 rounded-lg p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M20 12H4" stroke-width="2"/></svg></button>
+                <button onclick="toggleMaximize('recommendationsModal')" class="text-white hover:bg-white hover:bg-opacity-20 rounded-lg p-2 h-10 w-10 flex items-center justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4m12 0v4m0-4h-4M4 16v4m0 0h4m12 0v-4m0 4h-4" stroke-width="2"/></svg>
+                </button>
+                <button onclick="closeModal()" class="text-white hover:bg-white hover:bg-opacity-20 rounded-lg p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-width="2"/></svg></button>
+            </div>
+        </div>
+        <div id="recsModalBody" class="p-6 overflow-y-auto flex-grow custom-scroll">
+            <button onclick="showSkillsFromRecs()" class="flex items-center text-blue-600 mb-4 hover:underline">← Back to Skills Map</button>
+            <div class="mb-6">
+                <h3 id="recommendationsTitle" class="text-2xl font-bold text-gray-800 mb-1">Top 3 Recommended Courses:</h3>
+                <p id="recommendationsSubtitle" class="text-gray-600">Top courses curated to strengthen your Gen AI skills</p>
+            </div>
+            <div id="recommendationsContainer" class="space-y-4"></div>
+        </div>
+    </div>
+
+	<script>
+		let globalCoursesData = [];
+		let globalUserName = "";
+		let isMaximized = false;
+		let lastSelectedUserId = null;
+		let lastCompletedCourseId = null;
+		let isRecommendationsLoading = false;
+		let currentSkillCoverage = null;
+
+		const CONFIG = { 
+			apiBaseUrl: 'https://irhfg5cb10.execute-api.us-west-2.amazonaws.com/prod' 
+		};
+
+		async function handlePersonaClick(userId, courseId) {
+			console.log("Card clicked for user:", userId);
+			lastSelectedUserId = userId;
+			lastCompletedCourseId = courseId;
+			
+			// Show Modals
+			document.getElementById('overlay').classList.remove('hidden');
+			document.getElementById('skillsModal').classList.remove('hidden');
+			
+			setTimeout(() => {
+				Plotly.Plots.resize('radarChart');
+			}, 60);
+			
+			// Set Loading States
+			const chartContainer = document.getElementById('radarChartContainer');
+			chartContainer.innerHTML = '<div class="flex flex-col items-center justify-center w-full h-full"><div class="text-indigo-600 font-bold animate-pulse text-lg">Analyzing your skills profile...</div></div>';
+			
+			document.getElementById('topRecommendationTitle').innerHTML = '<span class="shimmer-text w-64 h-6"></span>';
+			document.getElementById('courseDescription').innerHTML = '<span class="shimmer-text w-full h-4 mb-2"></span><span class="shimmer-text w-3/4 h-4"></span>';
+			document.getElementById('masteryText').innerHTML = '<span class="shimmer-text w-32 h-4"></span>';
+			document.getElementById('PercentLeftToMastery').innerHTML = '<span class="shimmer-text w-32 h-4"></span>';
+
+			try {
+				const response = await fetch(`${CONFIG.apiBaseUrl}/recommend`, {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({ user_id: userId, just_completed_course_id: courseId })
+				});
+
+				if (!response.ok) throw new Error('API Response failed');
+				const data = await response.json();
+				
+				chartContainer.innerHTML = '<div id="radarChart" class="w-full h-full"></div>';
+				updateSkillsUI(data);
+
+			} catch (error) {
+				console.error("Connection Error:", error);
+				chartContainer.innerHTML = `<div class="text-red-500 p-4 text-center">Error: ${error.message}</div>`;
+			}
+		}
+
+		function updateSkillsUI(data) {
+			globalUserName = data.user_name;
+			document.getElementById('mainHeading').textContent = `Congratulations ${globalUserName} on Completing Your Course!`;
+			renderRadarChart(data.radar_data);
+			updateTopRecommendation(data);
+		}
+
+		function renderRadarChart(radarData) {
+			const radarEl = document.getElementById('radarChart');
+			const styledLabels = radarData.labels.map((label, i) =>
+				`${label}<br><span style="font-size:12px; color:#000;">(${radarData.coverage[i]}%)</span>`
+			);
+			// Store skill coverage % for displaying Congratulatary banner in Phase 2 recommendations page
+			window.skillCoverageMap = {};
+			radarData.labels.forEach((label, i) => {
+			  window.skillCoverageMap[label] = radarData.coverage[i];
+			});
+			
+			const customDataArray = radarData.labels.map((label, i) => [label, radarData.coverage[i]]);
+
+			const trace = {
+				type: 'scatterpolar',
+				r: [...radarData.visual_r, radarData.visual_r[0]], // for closing loop 
+				theta: [...styledLabels, styledLabels[0]],  // for closing loop 
+				fill: 'toself',
+				connectgaps: true,
+				fillcolor: 'rgba(157, 162, 235, 0.6)',
+				line: { color: '#4F46E5', width: 1 },
+				marker: {
+					size: 14,
+					color: ['#041ED1', '#FCA562', '#2EE86D', '#FC2B14', '#AF07DB', '#FF82A5', '#FCFA72', '#9E313C'],
+					line: { color: 'white', width: 2 }
+				},
+				customdata: [...customDataArray, customDataArray[0]], // for closing loop 
+				hovertemplate: "%{customdata[0]}<br>Mastery: %{customdata[1]}%<extra></extra>"
+			};
+
+			const layout = {
+				autosize: true,
+				margin: { l: 80, r: 80, t: 60, b: 60 },
+				polar: {
+					radialaxis: { 
+						visible: true, 
+						range: [0, 100], 
+						showticklabels: false, 
+						gridcolor: "#E2E8F0",
+						showline: false,
+						ticks: "",
+						ticklen: 0
+					},
+					angularaxis: { 
+						gridcolor: "#E2E8F0", 
+						tickfont: { size: 15, color: '#4F46E5', family: 'Arial, sans-serif' }, 
+						direction: 'clockwise', 
+						rotation: 90,
+						automargin: true 
+					},
+					bgcolor: '#EDFFF4'
+				},
+				showlegend: false
+			};
+
+			Plotly.newPlot('radarChart',[trace],layout,
+				{
+					responsive: true,
+					displayModeBar: false
+				}
+			);
+			
+			//radarEl.removeAllListeners?.("plotly_click");
+			
+			//radarEl.on("plotly_click", function (data) {
+			//	if (!data?.points?.length) return;
+
+			//	const point = data.points[0];
+			//	const rawCategory = point.theta || point.label || point.text;
+
+			//	if (!rawCategory) return;
+
+			//	const cleanCategory = rawCategory.split("(")[0].trim();
+
+			//	onSkillCategoryClick(cleanCategory);
+			// });
+			
+  
+			 // ✅ FIX 2: resize the same div Plotly rendered into
+			 setTimeout(() => {Plotly.Plots.resize('radarChart');}, 50);
+
+			setTimeout(() => {
+				const labels = document.querySelectorAll('.polartick text');
+				labels.forEach(el => {
+					el.style.cursor = 'pointer';
+					el.style.textDecoration = 'underline';
+				});
+			}, 200);
+
+			// This listener waits for a click on any part of the chart
+			// 1️⃣ DOT CLICKS (keep as-is, but safer)
+			document.getElementById('radarChart')
+			  .on('plotly_click', function (data) {
+				const rawLabel = data.points[0].theta;
+				const cleanCategory = rawLabel
+				  .replace(/<\/?[^>]+(>|$)/g, '')
+				  .replace(/\s*\(\d+%\)/, '')
+				  .trim();
+
+				console.log('Dot clicked:', cleanCategory);
+				onSkillCategoryClick(cleanCategory);
+			  });
+
+			// 2️⃣ LABEL CLICKS (THIS IS THE KEY FIX)
+			setTimeout(() => {
+			  const tickTexts = document.querySelectorAll('#radarChart .polartick text');
+
+			  tickTexts.forEach(el => {
+				el.style.cursor = 'pointer';
+				el.style.pointerEvents = 'all';
+				el.style.textDecoration = 'underline';
+
+				el.addEventListener('click', () => {
+				  const cleanCategory = el.textContent
+					.replace(/\(\d+%\)/, '')
+					.trim();
+
+				  console.log('Label clicked:', cleanCategory);
+				  onSkillCategoryClick(cleanCategory);
+				});
+			  });
+			}, 300);
+		}
+
+		function updateTopRecommendation(data) {
+			//console.log("Full API Data:", data);
+			const chase = data.expert_chase_dict;
+			if (!chase) return;
+
+			document.getElementById('masteryText').textContent = `Based on your fastest path towards mastering a skill`;
+			document.getElementById('PercentLeftToMastery').innerHTML = `You are <strong>${100 - data.expert_pct}%</strong> closer to mastering ${data.expert_target_category} skill`;
+			document.getElementById('topRecommendationTitle').textContent = chase.course_name || "Recommended Course";
+			document.getElementById('courseDescription').textContent = chase.course_description || "";
+			document.getElementById('courseDuration').textContent = chase.duration || "Self-paced";
+			document.getElementById('courseRating').textContent = chase.rating || "4.8";
+
+			const levelEl = document.getElementById('courseLevel');
+			levelEl.textContent = `• ${chase.difficulty_level || 'Intermediate'}`;
+			const colors = { 'Beginner': 'bg-green-100 text-green-800', 'Intermediate': 'bg-blue-100 text-blue-800', 'Advanced': 'bg-purple-100 text-purple-800' };
+			levelEl.className = `px-2.5 py-1 rounded-full text-xs font-medium ${colors[chase.difficulty_level] || 'bg-blue-100 text-blue-800'}`;
+
+			const btn = document.getElementById('topRecommendationBtn');
+			btn.onclick = () => { if(chase.enroll_url) window.open(chase.enroll_url, '_blank'); };
+		}
+
+		async function onSkillCategoryClick(skillCategory) {
+		  // Switch modals
+		  document.getElementById('skillsModal').classList.add('hidden');
+		  document.getElementById('recommendationsModal').classList.remove('hidden');
+
+		  // Update title immediately (UX fix)
+		  document.getElementById('recommendationsTitle').textContent =
+			`Top 3 Recommended Courses:`; // ${skillCategory}
+		  document.getElementById('recommendationsSubtitle').textContent =
+			`Top courses curated to strengthen your ${skillCategory} skills`;
+
+		  const container = document.getElementById('recommendationsContainer');
+			container.innerHTML = `
+			  <div class="space-y-4">
+				<div class="h-32 w-full shimmer-text rounded-2xl"></div>
+				<div class="h-32 w-full shimmer-text rounded-2xl"></div>
+				<p class="text-center text-sm text-gray-500 animate-pulse mt-4">
+				  Fetching personalized recommendations…
+				</p>
+			  </div>
+			`;
+			
+		  const skillCoveragePercentage = window.skillCoverageMap?.[skillCategory];
+
+			if (Number(skillCoveragePercentage) >= 100) {
+			  container.innerHTML = `
+				<div class="bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-blue-200 rounded-2xl p-6 flex flex-col items-center justify-center shadow-md animate-reveal interactive-card text-center">
+				  <h3 class="text-xl font-bold mb-2" style="color: #405CED">
+					🥳 Kudos! 100% Coverage Achieved!
+				  </h3>
+				  <p class="text-gray-700">
+					You've completed all courses in this category.<br>
+					Try exploring other skill categories to find the right-fit courses for your skill progression.
+				  </p>
+				</div>
+			  `;
+			  return; // ⛔ Stop API call
+			}
+			
+		  try {
+			const response = await fetch(`${CONFIG.apiBaseUrl}/recommend`, {
+			  method: "POST",
+			  headers: { "Content-Type": "application/json" },
+			  body: JSON.stringify({
+				user_id: lastSelectedUserId,
+				just_completed_course_id: lastCompletedCourseId,
+				skill_category: skillCategory
+			  })
+			});
+			
+			if (!response.ok) 
+				{ 
+					throw new Error(`API error ${response.status}`);
+				}
+			const data = await response.json();
+
+			renderRecommendations(
+			  data.recommendations,
+			  data.enrolled_courses,
+			  skillCategory
+			);
+
+		  } catch (error) {
+			console.error(error);
+			container.innerHTML =
+			  `<div class="text-red-500">Failed to fetch recommendations.</div>`;
+		  }
+		}
+
+		
+		function renderRecommendations(recommendations, enrolledCourses, skillCategory) {
+			const container = document.getElementById('recommendationsContainer');
+			
+			// Safety check: if no courses come back from Lambda
+			if (!recommendations || recommendations.length === 0) {
+				container.innerHTML = "<p class='text-gray-500 text-center py-8'>No new recommendations found for this category.</p>";
+				return;
+			}
+
+			// Loop through the 3 courses and create HTML for each
+			container.innerHTML = recommendations.map((course, index) => {
+				// Determine if user is already enrolled (from the list Lambda sent back)
+				const isEnrolled = enrolledCourses.includes(course.course_id);
+				const btnText = isEnrolled ? 'Continue' : 'Enroll Now';
+				
+				// Color coding for the difficulty badges
+				const levelColors = { 
+					'Beginner': 'bg-green-100 text-green-800', 
+					'Intermediate': 'bg-blue-100 text-blue-800', 
+					'Advanced': 'bg-purple-100 text-purple-800' 
+				};
+
+				return `
+					<div class="interactive-card bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex items-center justify-between animate-reveal" style="animation-delay: ${index * 0.1}s">
+						<div class="flex-1 pr-6">
+							<h4 class="text-xl font-bold text-gray-800 mb-2">${course.course_name}</h4>
+							<div class="flex items-center space-x-4 mb-3 text-sm">
+								<span class="px-3 py-1 ${levelColors[course.difficulty_level] || 'bg-gray-100'} rounded-full font-semibold">
+									${course.difficulty_level}
+								</span>
+								<span class="text-gray-500 flex items-center">
+									<svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2"/></svg>
+									${course.duration || '6 hours'}
+								</span>
+								<span class="text-yellow-600 font-bold">★ ${course.rating || '4.8'}</span>
+							</div>
+							<p class="text-gray-600 text-sm leading-relaxed">${course.course_description || ''}</p>
+						</div>
+						<div class="shrink-0">
+							<button onclick="window.open('${course.enroll_url}', '_blank')" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold px-8 py-3 rounded-xl shadow-lg btn-hover min-w-[160px]">
+								${btnText}
+							</button>
+						</div>
+					</div>`;
+			}).join('');
+		}
+		
+		function showSkillsFromRecs() {
+			document.getElementById('recommendationsModal').classList.add('hidden');
+			document.getElementById('skillsModal').classList.remove('hidden');
+
+			// Ensure radar resizes correctly
+			setTimeout(() => {
+				Plotly.Plots.resize('radarChart');
+			}, 100);
+		}
+
+		function closeModal() {
+			document.getElementById('skillsModal').classList.add('hidden');
+			document.getElementById('recommendationsModal').classList.add('hidden');
+			document.getElementById('overlay').classList.add('hidden');
+		}
+
+		function toggleMaximize(modalId) {
+			const modal = document.getElementById(modalId);
+			const body = modal.querySelector('.overflow-y-auto');
+
+			// ✅ ALWAYS restore content visibility when maximizing
+			body.style.opacity = '1';
+			body.style.pointerEvents = 'auto';
+			modal.classList.remove('minimized');
+
+			if (!isMaximized) { 
+				modal.style.width = '100%';
+				modal.style.height = '100%'; 
+				modal.classList.remove('rounded-tl-3xl');
+				isMaximized = true; 
+			} else { 
+				modal.style.width = '65%';
+				modal.style.height = '95%'; 
+				modal.classList.add('rounded-tl-3xl');
+				isMaximized = false; 
+			}
+
+			setTimeout(() => {
+				Plotly.Plots.resize('radarChart');
+			}, 100);
+		}
+
+
+		function minimizeModal(modalId) {
+			const modal = document.getElementById(modalId);
+			const body = modal.querySelector('.overflow-y-auto');
+
+			const isMinimized = modal.classList.contains('minimized');
+
+			if (!isMinimized) {
+				// Minimize
+				modal.classList.add('minimized');
+				body.style.opacity = '0';
+				body.style.pointerEvents = 'none';
+				modal.style.height = '76px';
+			} else {
+				// Restore
+				modal.classList.remove('minimized');
+				body.style.opacity = '1';
+				body.style.pointerEvents = 'auto';
+				modal.style.height = isMaximized ? '100%' : '95%';
+
+				setTimeout(() => {
+					Plotly.Plots.resize('radarChart');
+				}, 80);
+			}
+		}
+
+</script>
+ 
+</body>
+</html>

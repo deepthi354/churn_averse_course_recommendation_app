@@ -1,0 +1,1669 @@
+{
+    "columns":[
+        "user_name",
+        "course_id",
+        "couse_name",
+        "lessons_progress_percent",
+        "status"
+    ],
+    "index":[
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        4032,
+        18851,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        789606,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081,
+        2129081
+    ],
+    "data":[
+        [
+            "Bhaskar Orre",
+            5,
+            "ChatGPT Prompt Engineering for Developers",
+            22.2,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            6,
+            "LangChain for LLM Application Development",
+            100.0,
+            "completed"
+        ],
+        [
+            "Bhaskar Orre",
+            7,
+            "How Diffusion Models Work",
+            0.0,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            8,
+            "Building Systems with the ChatGPT API",
+            0.0,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            9,
+            "LangChain Chat with Your Data",
+            0.0,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            10,
+            "Building Generative AI Applications with Gradio",
+            0.0,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            12,
+            "Large Language Models with Semantic Search",
+            0.0,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            15,
+            "Understanding and Applying Text Embeddings",
+            0.0,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            20,
+            "Building and Evaluating Advanced RAG",
+            0.0,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            25,
+            "Automated Testing for LLMOps",
+            0.0,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            1043,
+            "Generative AI for Everyone\u3164",
+            0.0,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            1061,
+            "Neural Networks and Deep Learning",
+            98.4,
+            "completed"
+        ],
+        [
+            "Bhaskar Orre",
+            1062,
+            "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
+            35.3,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            1066,
+            "Supervised Machine Learning: Regression and Classification",
+            100.0,
+            "completed"
+        ],
+        [
+            "Bhaskar Orre",
+            1067,
+            "Advanced Learning Algorithms",
+            100.0,
+            "completed"
+        ],
+        [
+            "Bhaskar Orre",
+            1068,
+            "Unsupervised Learning, Recommenders, Reinforcement Learning",
+            98.0,
+            "completed"
+        ],
+        [
+            "Bhaskar Orre",
+            1190,
+            "Generative AI with Large Language Models",
+            46.9,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            1192,
+            "Data Analytics Foundations",
+            0.0,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            1203,
+            "Introduction to Generative AI for Software Development",
+            0.0,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            1207,
+            "Claude Code: A Highly Agentic Coding Assistant",
+            0.0,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            10053,
+            "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning",
+            0.0,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            10060,
+            "Fast Prototyping of GenAI Apps with Streamlit",
+            0.0,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            10074,
+            "Agentic AI",
+            32.4,
+            "not_completed"
+        ],
+        [
+            "Bhaskar Orre",
+            10136,
+            "Build with Andrew",
+            11.1,
+            "not_completed"
+        ],
+        [
+            "Heather Bridgman",
+            10074,
+            "Agentic AI",
+            23.5,
+            "not_completed"
+        ],
+        [
+            "Cynthia Hong",
+            5,
+            "ChatGPT Prompt Engineering for Developers",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            6,
+            "LangChain for LLM Application Development",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            7,
+            "How Diffusion Models Work",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            8,
+            "Building Systems with the ChatGPT API",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            9,
+            "LangChain Chat with Your Data",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10,
+            "Building Generative AI Applications with Gradio",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            11,
+            "Evaluating and Debugging Generative AI",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            12,
+            "Large Language Models with Semantic Search",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            13,
+            "Finetuning Large Language Models",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            14,
+            "How Business Thinkers Can Start Building AI Plugins With Semantic Kernel",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            15,
+            "Understanding and Applying Text Embeddings",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            16,
+            "Pair Programming with a Large Language Model",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            17,
+            "Functions, Tools and Agents with LangChain",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            18,
+            "Vector Databases: from Embeddings to Applications",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            19,
+            "Quality and Safety for LLM Applications",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            20,
+            "Building and Evaluating Advanced RAG",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            21,
+            "Reinforcement Learning From Human Feedback",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            22,
+            "Advanced Retrieval for AI with Chroma",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            23,
+            "Build LLM Apps with LangChain.js",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            24,
+            "LLMOps",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            25,
+            "Automated Testing for LLMOps",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            26,
+            "Building Applications with Vector Databases",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            27,
+            "Serverless LLM Apps Amazon Bedrock",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            28,
+            "Prompt Engineering with Llama 2&3",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            29,
+            "Open Source Models with Hugging Face",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            30,
+            "Knowledge Graphs for RAG",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            31,
+            "Efficiently Serving LLMs",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            32,
+            "JavaScript RAG Web Apps with LlamaIndex",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            33,
+            "Red Teaming LLM Applications",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            34,
+            "Preprocessing Unstructured Data for LLM Applications",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            35,
+            "Quantization Fundamentals with Hugging Face",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            36,
+            "Getting Started with Mistral",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            37,
+            "Prompt Engineering for Vision Models",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            38,
+            "Quantization in Depth",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            39,
+            "Building Agentic RAG with Llamaindex",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            40,
+            "Building Multimodal Search and RAG",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            41,
+            "Multi AI Agent Systems with crewAI",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            42,
+            "Introduction to on-device AI",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            43,
+            "AI Agentic Design Patterns with AutoGen",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            44,
+            "AI Agents in LangGraph",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            45,
+            "Building Your Own Database Agent",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            46,
+            "Function-calling and data extraction with LLMs",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            47,
+            "Carbon Aware Computing for GenAI developers",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1001,
+            "Prompt Compression and Query Optimization",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1002,
+            "Pretraining LLMs",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1003,
+            "Intro to Federated Learning",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1004,
+            "AI Python for Beginners",
+            88.1,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1005,
+            "Federated Fine-tuning of LLMs with Private Data",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1007,
+            "Embedding Models: from Architecture to Implementation",
+            87.5,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1008,
+            "Improving Accuracy of LLM Applications",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1009,
+            "Building AI Applications With Haystack",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1010,
+            "Large Multimodal Model Prompting with Gemini",
+            80.0,
+            "not_completed"
+        ],
+        [
+            "Cynthia Hong",
+            1013,
+            "Multimodal RAG: Chat with Videos",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1015,
+            "Retrieval Optimization: Tokenization to Vector Quantization",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1016,
+            "Introducing Multimodal Llama 3.2",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1017,
+            "Serverless Agentic Workflows with Amazon Bedrock",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1018,
+            "Practical Multi AI Agents and Advanced Use Cases with crewAI",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1019,
+            "LLMs as Operating Systems: Agent Memory",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1020,
+            "Safe and reliable AI via guardrails",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1021,
+            "Building an AI-Powered Game",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1034,
+            "Collaborative Writing and Coding with OpenAI Canvas",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1035,
+            "How Transformer LLMs Work",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1036,
+            "Build Long-Context AI Apps with Jamba",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1037,
+            "Reasoning with o1",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1039,
+            "Building toward Computer Use with Anthropic",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1040,
+            "Attention in Transformers: Concepts and Code in PyTorch",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1043,
+            "Generative AI for Everyone\u3164",
+            97.5,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1044,
+            "Evaluating AI Agents",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1045,
+            "AI for Everyone",
+            97.6,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1047,
+            "Event-Driven Agentic Document Workflows",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1048,
+            "Build Apps with Windsurf\u2019s AI Coding Agents",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1049,
+            "Long-Term Agentic Memory With LangGraph",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1052,
+            "Getting Structured LLM Output",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1053,
+            "Vibe Coding 101 with Replit",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1054,
+            "Building AI Browser Agents",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1055,
+            "Building Code Agents with Hugging Face smolagents",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1056,
+            "Building AI Voice Agents for Production",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1057,
+            "MCP: Build Rich-Context AI Apps with Anthropic",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1058,
+            "Reinforcement Fine-Tuning LLMs With GRPO",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1059,
+            "DSPy: Build and Optimize Agentic Apps",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1060,
+            "Orchestrating Workflows for GenAI Applications",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1061,
+            "Neural Networks and Deep Learning",
+            98.4,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1062,
+            "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1063,
+            "Structuring Machine Learning Projects",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1064,
+            "Convolutional Neural Networks",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1065,
+            "Sequence Models",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1066,
+            "Supervised Machine Learning: Regression and Classification",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1067,
+            "Advanced Learning Algorithms",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1068,
+            "Unsupervised Learning, Recommenders, Reinforcement Learning",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1069,
+            "Building with Llama 4",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1070,
+            "ACP: Agent Communication Protocol",
+            92.3,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1071,
+            "Post-training of LLMs",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1189,
+            "Design, Develop, and Deploy Multi-Agent Systems  with CrewAI",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1190,
+            "Generative AI with Large Language Models",
+            98.4,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1191,
+            "Pydantic for LLM Workflows",
+            87.5,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1192,
+            "Data Analytics Foundations",
+            99.1,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1193,
+            "Applied Statistics for Data Analytics",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1194,
+            "Python for Data Analytics",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1195,
+            "Data I\/O and Preprocessing with Python and SQL",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1196,
+            "Data Storytelling",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1197,
+            "Linear Algebra for Machine Learning and Data Science",
+            98.8,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1198,
+            "Calculus for Machine Learning and Data Science",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1199,
+            "Probability & Statistics for Machine Learning & Data Science",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1203,
+            "Introduction to Generative AI for Software Development",
+            83.3,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1204,
+            "Team Software Engineering with AI",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1205,
+            "AI-Powered Software and System Design",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1206,
+            "Retrieval Augmented Generation (RAG)",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1207,
+            "Claude Code: A Highly Agentic Coding Assistant",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1209,
+            "AI and Public Health",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1210,
+            "AI and Climate Change",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1211,
+            "AI and Disaster Management",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            1215,
+            "Agentic Knowledge Graph Construction",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10057,
+            "Knowledge Graphs for AI Agent: API Discovery",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10060,
+            "Fast Prototyping of GenAI Apps with Streamlit",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10061,
+            "Building and Evaluating Data Agents",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10064,
+            "Fine-tuning & RL for LLMs: Intro to Post-training",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10071,
+            "Build AI Apps with MCP Server: Working with Box Files",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10074,
+            "Agentic AI",
+            97.1,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10075,
+            "Governing AI Agents",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10079,
+            "Building Live Voice Agents with Google\u2019s ADK",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10081,
+            "PyTorch: Fundamentals",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10082,
+            "PyTorch: Techniques and Ecosystem Tools",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10083,
+            "PyTorch: Advanced Architectures and Deployment",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10097,
+            "Jupyter AI: AI Coding in Notebooks",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10100,
+            "Semantic Caching for AI Agents",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10112,
+            "Building Coding Agents with Tool Execution",
+            88.9,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10118,
+            "Multi-vector Image Retrieval",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10134,
+            "Nvidia\u2019s NeMo Agent Toolkit: Making Agents Reliable",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10136,
+            "Build with Andrew",
+            100.0,
+            "completed"
+        ],
+        [
+            "Cynthia Hong",
+            10141,
+            "Document AI: From OCR to Agentic Doc Extraction",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            5,
+            "ChatGPT Prompt Engineering for Developers",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            6,
+            "LangChain for LLM Application Development",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            7,
+            "How Diffusion Models Work",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            8,
+            "Building Systems with the ChatGPT API",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            9,
+            "LangChain Chat with Your Data",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            10,
+            "Building Generative AI Applications with Gradio",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            11,
+            "Evaluating and Debugging Generative AI",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            12,
+            "Large Language Models with Semantic Search",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            13,
+            "Finetuning Large Language Models",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            14,
+            "How Business Thinkers Can Start Building AI Plugins With Semantic Kernel",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            15,
+            "Understanding and Applying Text Embeddings",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            16,
+            "Pair Programming with a Large Language Model",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            17,
+            "Functions, Tools and Agents with LangChain",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            18,
+            "Vector Databases: from Embeddings to Applications",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            19,
+            "Quality and Safety for LLM Applications",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            20,
+            "Building and Evaluating Advanced RAG",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            21,
+            "Reinforcement Learning From Human Feedback",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            22,
+            "Advanced Retrieval for AI with Chroma",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            23,
+            "Build LLM Apps with LangChain.js",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            24,
+            "LLMOps",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            25,
+            "Automated Testing for LLMOps",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            26,
+            "Building Applications with Vector Databases",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            27,
+            "Serverless LLM Apps Amazon Bedrock",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            28,
+            "Prompt Engineering with Llama 2&3",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            29,
+            "Open Source Models with Hugging Face",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            30,
+            "Knowledge Graphs for RAG",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            31,
+            "Efficiently Serving LLMs",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            32,
+            "JavaScript RAG Web Apps with LlamaIndex",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            33,
+            "Red Teaming LLM Applications",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            34,
+            "Preprocessing Unstructured Data for LLM Applications",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            35,
+            "Quantization Fundamentals with Hugging Face",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            36,
+            "Getting Started with Mistral",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            37,
+            "Prompt Engineering for Vision Models",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            38,
+            "Quantization in Depth",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            39,
+            "Building Agentic RAG with Llamaindex",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            40,
+            "Building Multimodal Search and RAG",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            41,
+            "Multi AI Agent Systems with crewAI",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            42,
+            "Introduction to on-device AI",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            43,
+            "AI Agentic Design Patterns with AutoGen",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            44,
+            "AI Agents in LangGraph",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            45,
+            "Building Your Own Database Agent",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            46,
+            "Function-calling and data extraction with LLMs",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            47,
+            "Carbon Aware Computing for GenAI developers",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            1001,
+            "Prompt Compression and Query Optimization",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            1002,
+            "Pretraining LLMs",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            1003,
+            "Intro to Federated Learning",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            1004,
+            "AI Python for Beginners",
+            26.2,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            1005,
+            "Federated Fine-tuning of LLMs with Private Data",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            1007,
+            "Embedding Models: from Architecture to Implementation",
+            87.5,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            1008,
+            "Improving Accuracy of LLM Applications",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            1009,
+            "Building AI Applications With Haystack",
+            100.0,
+            "completed"
+        ],
+        [
+            "KEERTHANA PRIYA R",
+            1010,
+            "Large Multimodal Model Prompting with Gemini",
+            80.0,
+            "not_completed"
+        ]
+    ]
+}
