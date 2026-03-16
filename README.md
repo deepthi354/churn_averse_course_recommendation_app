@@ -1,7 +1,7 @@
 # Churn Averse Course Recommendation App
 
 ## Project Overview 
-A recommendation engine built using Markov chain transition probabilities to maximize learner engagement and lifetime value while minimizing churn.
+An end-to-end prescriptive analytics demo app built utilizing AWS serverless architecture & Markov Chain Transition Probabilities to recommend high-retention (least churn) learning pathways and optimize Learner Lifetime Value (LTV).
 
 *Applied following techniques:* 
 - Markov-Chain Transition Logic to prioritize courses with lower churn & higher course transition probabilities instead of the standard 'Those who take X also take Y' content/user similarity. 
